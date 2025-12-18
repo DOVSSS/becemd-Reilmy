@@ -5,6 +5,7 @@
 /node_modules
 yarn-error.log
 
+
 .idea
 
 coverage
@@ -16,11 +17,6 @@ medusa-db.sql
 build
 .cache
 
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+.yarn
+.pnp.cjs
 
-.medusa
