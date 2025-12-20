@@ -1,6 +1,8 @@
-const { loadEnv } = require("@medusajs/utils");
-loadEnv("test", process.cwd());
+// ЗАКОММЕНТИРОВАТЬ ЭТИ ДВЕ СТРОКИ:
+// const { loadEnv } = require("@medusajs/utils");
+// loadEnv("test", process.cwd());
 
+// ВСЁ ОСТАЛЬНОЕ ОСТАВИТЬ БЕЗ ИЗМЕНЕНИЙ:
 module.exports = {
   transform: {
     "^.+\\.[jt]s$": [
