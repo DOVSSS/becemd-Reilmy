@@ -2,20 +2,15 @@ import { defineConfig } from '@medusajs/framework/utils'
 
 module.exports = defineConfig({
   projectConfig: {
-    // Критически важно: должно быть database_url (с подчёркиванием), а не databaseUrl
-    database_url: process.env.DATABASE_URL,
+    
+    databaseUrl: process.env.DATABASE_URL as string,
     
     http: {
-      storeCors: process.env.STORE_CORS,
-      adminCors: process.env.ADMIN_CORS,
-      authCors: process.env.AUTH_CORS,
-      jwtSecret: process.env.JWT_SECRET,
-      cookieSecret: process.env.COOKIE_SECRET,
+      storeCors: process.env.STORE_CORS as string,
+      adminCors: process.env.ADMIN_CORS as string,
+      authCors: process.env.AUTH_CORS as string,
+      jwtSecret: process.env.JWT_SECRET as string,
+      cookieSecret: process.env.COOKIE_SECRET as string,
     }
-  },
-  
-  // Добавьте для отладки
-  logging: {
-    level: process.env.NODE_ENV === 'production' ? 'info' : 'debug'
   }
 })
