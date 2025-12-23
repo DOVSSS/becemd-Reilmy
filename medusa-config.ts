@@ -2,15 +2,13 @@ import { defineConfig } from '@medusajs/framework/utils'
 
 module.exports = defineConfig({
   projectConfig: {
-    
     databaseUrl: process.env.DATABASE_URL as string,
-    
     http: {
-      storeCors: process.env.STORE_CORS as string,
-      adminCors: process.env.ADMIN_CORS as string,
-      authCors: process.env.AUTH_CORS as string,
-      jwtSecret: process.env.JWT_SECRET as string,
-      cookieSecret: process.env.COOKIE_SECRET as string,
+      storeCors: process.env.STORE_CORS || "http://localhost:8000",
+      adminCors: process.env.ADMIN_CORS || "http://localhost:7000,http://localhost:7001",
+      authCors: process.env.AUTH_CORS || "http://localhost:7000,http://localhost:7001",
+      jwtSecret: process.env.JWT_SECRET || "supersecret",
+      cookieSecret: process.env.COOKIE_SECRET || "anothersecret",
     }
   }
 })
